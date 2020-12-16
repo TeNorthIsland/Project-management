@@ -15,7 +15,7 @@ import { Link, useIntl, connect, Dispatch, history } from 'umi';
 import { GithubOutlined } from '@ant-design/icons';
 import { Result, Button } from 'antd';
 import Authorized from '@/utils/Authorized';
-import RightContent from '@/components/GlobalHeader/RightContent';
+
 import { ConnectState } from '@/models/connect';
 import { getMatchMenu } from '@umijs/route-utils';
 import logo from '../assets/logo.svg';
@@ -139,7 +139,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props) => {
         }}
         footerRender={() => defaultFooterDom}
         menuDataRender={menuDataRender}
-        rightContentRender={() => <RightContent />}
+
         postMenuData={(menuData) => {
           menuDataRef.current = menuData || [];
           return menuData || [];
