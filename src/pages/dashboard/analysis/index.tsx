@@ -9,8 +9,6 @@ import { connect, Dispatch } from 'umi';
 
 import PageLoading from './components/PageLoading';
 import { getTimeDistance } from './utils/utils';
-import { AnalysisData } from './data.d';
-import styles from './style.less';
 
 const IntroduceRow = React.lazy(() => import('./components/IntroduceRow'));
 const SalesCard = React.lazy(() => import('./components/SalesCard'));
@@ -22,7 +20,7 @@ type RangePickerValue = RangePickerProps<moment.Moment>['value'];
 
 
 
-class Analysis extends Component<AnalysisProps, AnalysisState> {
+class Analysis extends Component {
   render() {
     return (
       <div>22</div>
