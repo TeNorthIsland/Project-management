@@ -8,8 +8,10 @@
 export default {
   dev: {
     '/api/': {
-      // target: 'http://112.124.109.250:3045', 线上地址
-      target: 'http://localhost:3045',
+      // target: 'http://112.124.109.250:3045',
+
+      target: 'http://nestapi.test.utools.club',
+
       changeOrigin: true,
       pathRewrite: { '^/api': '/api' },
     },

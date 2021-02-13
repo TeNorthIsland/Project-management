@@ -1,9 +1,11 @@
 // 项目列表
+// @ts-nocheck
 import React, { useState, useRef, useEffect, useCallback, useContext } from 'react'
 
 import { Tabs, Table, Input, Button, Popconfirm, Form } from 'antd';
 
 const { TabPane } = Tabs;
+
 const EditableContext = React.createContext();
 
 const EditableRow = ({ index, ...props }) => {
@@ -90,17 +92,37 @@ class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: '姓名',
+        title: '名称',
         dataIndex: 'name',
-        width: '30%',
+
         editable: true,
       },
       {
-        title: '邮箱',
+        title: '编号',
         dataIndex: 'address',
       },
       {
-        title: '角色',
+        title: '项目类型',
+        dataIndex: 'role',
+      },
+      {
+        title: '计划开始时间',
+        dataIndex: 'role',
+      },
+      {
+        title: '计划结束时间',
+        dataIndex: 'role',
+      }, {
+        title: '项目经理',
+        dataIndex: 'role',
+      }, {
+        title: '描述',
+        dataIndex: 'role',
+      }, {
+        title: '状态',
+        dataIndex: 'role',
+      }, {
+        title: '项目进度',
         dataIndex: 'role',
       },
       {
@@ -108,7 +130,8 @@ class EditableTable extends React.Component {
         dataIndex: 'operation',
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
-            <><a>编辑   </a>
+            <>
+              <a>编辑   </a><a>完成   </a><a>终止  </a><a>暂停  </a><a>延期   </a>
               <Popconfirm title='确认删除吗？' onConfirm={() => this.handleDelete(record.key)}>
 
                 <a>删除</a>
@@ -222,43 +245,21 @@ const Demo = () => (
       <EditableTable />
     </TabPane>
     <TabPane tab="我创建（2）" key="2">
-      Content of Tab Pane 2
+      <EditableTable />
     </TabPane>
     <TabPane tab="已延期（2）" key="3">
-      Content of Tab Pane 3
+      <EditableTable />
     </TabPane>
     <TabPane tab="未开始（12）" key="4">
-      Content of Tab Pane 3
+      <EditableTable />
     </TabPane>
     <TabPane tab="全部（3）" key="5">
-      Content of Tab Pane 3
+      <EditableTable />
     </TabPane>
   </Tabs>
 );
 const Ana: React.FC<{}> = () => {
-  /** 
-   * state 
-   */
 
-
-  /** 
-   * method
-   */
-
-
-  /** 
-   * effct 
-   */
-
-
-  /** 
-   * componentsConfig 
-   */
-
-
-  /** 
-   * render
-   */
   return (
     <>
       <h1>项目列表</h1>

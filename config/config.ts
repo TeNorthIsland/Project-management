@@ -64,7 +64,7 @@ export default defineConfig({
               path: '/dashboard',
               name: '统计',
               icon: 'dashboard',
-              component: './dashboard/analysis'
+              component: './dashboard/Statistics'
             },
 
             // 项目管理
